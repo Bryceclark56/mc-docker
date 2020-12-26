@@ -11,10 +11,7 @@ RUN apk add --no-cache \
     wget
 
 # Move required files
-COPY ./getjar.sh ./getjar.sh
-
-# Get server.jar indicated by VERSION
-RUN ./getjar.sh $VERSION
+COPY ./scripts/ ./scripts/
 
 # Start server
 CMD ["java", "-Dcom.mojang.eula.agree=${EULA}", "minecraft_server-X.Y.Z.jar"]

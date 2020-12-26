@@ -6,7 +6,9 @@ ARG EULA="false"
 RUN apk add --no-cache \
     --virtual getjar-deps \
     --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
-    jq
+    jq \
+    curl \
+    wget
 
 # Move required files
 COPY ./getjar.sh ./getjar.sh

@@ -3,8 +3,8 @@ FROM adoptopenjdk/openjdk15-openj9:alpine-jre
 EXPOSE 25565/tcp
 
 # Move required files
-COPY ./scripts/ ./scripts/
-RUN ["chmod", "+x", "-R", "scripts"]
+COPY . mc-server/
+RUN ["chmod", "+x", "-R", "mc-server/scripts"]
 
 # Install required packages
 RUN apk add --no-cache \

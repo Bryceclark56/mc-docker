@@ -6,11 +6,7 @@ CURRENT_FOLDER=${PWD##*/}
 echo "Current directory is $PWD"
 if [ "$CURRENT_FOLDER" != "server" ]; then
     echo "Startup is in the wrong directory; attempting to fix."
-    if [ "$CURRENT_FOLDER" = "scripts" ]; then
-        cd ../server/
-    else
-        cd ./server/
-    fi
+    cd /mc-server/server
 fi
 
 # Check if first startup

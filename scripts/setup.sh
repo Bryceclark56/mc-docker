@@ -6,6 +6,7 @@ echo "Running first-time setup..."
 ../scripts/getjar.sh
 
 # Set EULA
+EULA=${EULA:-false}
 echo "Setting EULA to $EULA"
 echo "EULA=$EULA" > eula.txt
 

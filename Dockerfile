@@ -14,4 +14,4 @@ RUN apk add --no-cache \
 COPY ./scripts/ ./scripts/
 
 # Start server
-CMD ["java", "-Dcom.mojang.eula.agree=${EULA}", "minecraft_server-X.Y.Z.jar"]
+CMD ["./scripts/startup.sh"]

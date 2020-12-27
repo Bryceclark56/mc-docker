@@ -1,3 +1,4 @@
+#!/bin/sh
 # Ensure running in server/ directory
 CURRENT_FOLDER=${PWD##*/}
 if [ $CURRENT_FOLDER != "server" ]; then

@@ -4,11 +4,7 @@ ARG EULA="false"
 
 # Install required packages
 RUN apk add --no-cache \
-    --virtual getjar-deps \
-    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
-    jq \
-    curl \
-    wget
+    jq curl wget
 
 # Move required files
 COPY ./scripts/ ./scripts/

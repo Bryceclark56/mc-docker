@@ -39,6 +39,6 @@ fi
 # Get server.jar url and grab the file
 JAR_URL=$(curl -sSf "$VERSION_URL" | jq -r .downloads.server.url)
 echo "Downloading JAR file from $JAR_URL"
-wget "$JAR_URL" --quiet --show-progress -O "minecraft_server-$VERSION.jar"
+curl -# -o "minecraft_server-$VERSION.jar" "$JAR_URL"
 echo "Writing version to version.txt"
 echo "$VERSION" > ".version"

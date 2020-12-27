@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Retrieving version number..."
-VERSION=$(<.version)
+VERSION=$(cat .version)
 echo "Found version $VERSION"
 
 echo "Starting server..."
-java "minecraft_server-$VERSION.jar"
+java -jar "minecraft_server-$VERSION.jar"

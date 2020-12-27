@@ -8,6 +8,6 @@ echo "Running first-time setup..."
 # Set EULA
 EULA=${EULA:-false}
 echo "Setting EULA to $EULA"
-echo "EULA=$EULA" > eula.txt
+echo "eula=$EULA" > eula.txt
 
 echo "First-time setup finished"

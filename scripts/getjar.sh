@@ -21,11 +21,11 @@ fi
 
 echo "Using Minecraft version $VERSION"
 
-echo "Checking for existing server JAR file..."
-if [ -e "minecraft_server-"$VERSION".jar" ]; then
-    echo "Server JAR for "$VERSION" already exists"
-    exit 0
-fi
+#echo "Checking for existing server JAR file..."
+#if [ -e "minecraft_server-"$VERSION".jar" ]; then
+#    echo "Server JAR for "$VERSION" already exists"
+#    exit 0
+#fi
 
 echo "Searching for further information on version $VERSION"
 # Get url for further information on selected version
@@ -39,6 +39,6 @@ fi
 # Get server.jar url and grab the file
 JAR_URL=$(curl -sSf "$VERSION_URL" | jq -r .downloads.server.url)
 echo "Downloading JAR file from $JAR_URL"
-curl -# -o "minecraft_server-$VERSION.jar" "$JAR_URL"
+curl -# -o "server.jar" "$JAR_URL"
 echo "Writing version to version.txt"
 echo "$VERSION" > ".version"

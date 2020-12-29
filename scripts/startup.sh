@@ -11,7 +11,7 @@ fi
 
 # Check if first startup
 #   Launch setup.sh if true
-[ ! -e ".version" ] && ../scripts/setup.sh
+[ ! -e "server.jar" ] && ../scripts/setup.sh
 
 # Launch server
 ../scripts/start-server.sh

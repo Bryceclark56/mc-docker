@@ -1,5 +1,8 @@
 FROM adoptopenjdk/openjdk15-openj9:alpine-jre
 
+ENV EULA=false
+ENV USEFABRIC=false
+
 EXPOSE 25565/tcp
 
 # Move required files

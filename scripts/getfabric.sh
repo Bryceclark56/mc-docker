@@ -15,3 +15,6 @@ echo "Found build #"$(echo $LAST_STABLE_JSON | jq -r .number)" from $(date -d "@
 
 echo "Attempting to download JAR file: $(echo $LAST_STABLE_JSON | jq -r .artifacts[0].fileName) > fabric-installer.jar"
 curl -# -o "fabric-installer.jar" "${LAST_STABLE_URL}artifact/$(echo $LAST_STABLE_JSON | jq -r .artifacts[0].relativePath)"
+
+echo "Running fabric installer"
+java -jar fabric-installer.jar server

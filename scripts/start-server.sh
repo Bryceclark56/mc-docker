@@ -6,7 +6,7 @@
 echo "Starting server..."
 SERVER_JAR="server.jar"
 if [ "$USEFABRIC" = true ]; then
-    echo "Using fabric..."
+    echo "Using fabric launcher..."
     SERVER_JAR="fabric-server-launch.jar"
 fi
 

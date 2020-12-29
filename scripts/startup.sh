@@ -6,6 +6,7 @@ CURRENT_FOLDER=${PWD##*/}
 echo "Current directory is $PWD"
 if [ "$CURRENT_FOLDER" != "server" ]; then
     echo "Startup is in the wrong directory; attempting to fix."
+    [ ! -d /mc-server/server ] && mkdir -p /mc-server/server
     cd /mc-server/server
 fi
 

@@ -2,7 +2,7 @@ FROM adoptopenjdk/openjdk15-openj9:alpine-jre
 
 ENV EULA=false
 ENV USEFABRIC=false
-ENV HEAP_SIZE=4096M
+ENV HEAP_SIZE=4096
 
 EXPOSE 25565/tcp
 
